@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="codeViewModel"
+            type="com.example.quizapp.viewmodels.CodeViewModels" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.HomeFragment"
+        android:background="#296283">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <RelativeLayout
+            android:id="@+id/code_container_code"
+            android:layout_width="300dp"
+            android:layout_height="170dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="60dp"
+            android:background="#81B0BF">
+
+            <EditText
+                android:id="@+id/code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="40dp"
+                android:hint="Massukan Code"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/button_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/code"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="35dp"
+                android:text="Enter"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/code_container_Question"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_below="@+id/code_container_code"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp">
+
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="190dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#81B0BF">
+
+                <ImageView
+                    android:id="@+id/img_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:src="@drawable/math" />
+
+                <TextView
+                    android:id="@+id/name_question"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_question"
+                    android:layout_marginTop="14dp"
+                    android:text="Math" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_proses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="@{codeViewModel.code}"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
